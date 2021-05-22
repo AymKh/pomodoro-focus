@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
+    <title>Pomodoro 🍅</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pomodoro 🍅</h1>
+            <nav>
+                <i class="far fa-question-circle" id="helpButton"></i>
+                <a href="https://github.com/AymKh/pomodoro-focus">
+                    <i class="fab fa-github"></i>
+                </a>
+                <i class="fas fa-cog" id="settingsButton"></i>
+            </nav>
+        </header>
+        <main>
+            <div id="grid-container">
+                <div id="taskPanel" class="pomoCard">
+                    <div id="taskPanelHeader">
+                        <h4>Your Tasks 📃</h4>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                    <div id="taskPanelBody">
+                        <div class="task">
+                            some task here
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pomodorTimer" class="pomoCard">
+                    <nav id="pomoButtons">
+                        <button id="pomoTime" class="activeButton">Pomodoro</button>
+                        <button id="pomoBreak">Break</button>
+                    </nav>
+                    <div id="pomoTimer">
+                        <p>25:00</p>
+                    </div>
+                    <button id="pomoStart">Start</button>
+                </div>
+
+                <div id="motivationalQuotes" class="pomoCard">
+                    <div id="quoteHeader">
+                        <h3>Inspirational Quotes 🙌</h3>
+                    </div>
+                    <p id="quote">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, accusantium.</p>
+                </div>
+            </div>
+        </main>
+        <!-- end of container -->
+    </div>
+</body>
+</html>

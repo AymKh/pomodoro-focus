@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 90vh;
+    font-family: sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
+    background-color: #F5F5F7;
+}
+.container{
+    width: 70%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+i, a{
+    &:hover{
+        cursor: pointer;
+        color: #262626;
+    }
+    &:after{
+        position: absolute;
+        padding: .2rem .3rem;
+        font-size: 1rem;
+        right: 0;
+        top: 40px;
+        width: auto;
+        color: #fff;
+        background-color: #262626;
+        border-radius: 1rem;
+        animation: tooltip .3s ease-in-out;
+    }
+}
+
+@import "./header";
+@import "./main";

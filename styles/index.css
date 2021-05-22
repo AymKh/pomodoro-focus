@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 90vh;
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+  background-color: #F5F5F7;
+}
+
+.container {
+  width: 70%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+i:hover, a:hover {
+  cursor: pointer;
+  color: #262626;
+}
+
+i:after, a:after {
+  position: absolute;
+  padding: .2rem .3rem;
+  font-size: 1rem;
+  right: 0;
+  top: 40px;
+  width: auto;
+  color: #fff;
+  background-color: #262626;
+  border-radius: 1rem;
+  -webkit-animation: tooltip .3s ease-in-out;
+          animation: tooltip .3s ease-in-out;
+}
+
+header {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #4e4e4e;
+}
+
+header nav i, header nav a {
+  font-size: 2rem;
+  padding-right: 1rem;
+  position: relative;
+}
+
+header nav i:last-child, header nav a:last-child {
+  padding: 0;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #4e4e4e;
+  position: relative;
+}
+
+header nav a:hover:after {
+  content: "Star on GitHub";
+  width: 110px;
+}
+
+header nav #helpButton:hover:after {
+  content: "Help";
+  font-family: sans-serif;
+}
+
+header nav #settingsButton:hover:after {
+  content: "Settings";
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+@-webkit-keyframes tooltip {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes tooltip {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+main {
+  width: 100%;
+  margin-top: 2rem;
+  height: 100%;
+}
+
+main #grid-container {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 3fr;
+      grid-template-columns: 2fr 3fr;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+main #grid-container .pomoCard {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+main #grid-container #taskPanel {
+  padding: 0;
+  position: relative;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+main #grid-container #taskPanel #taskPanelHeader {
+  font-size: 1.5rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #grid-container #taskPanel #taskPanelHeader i {
+  position: relative;
+}
+
+main #grid-container #taskPanel #taskPanelHeader i:hover:after {
+  content: "Clear";
+  font-family: sans-serif;
+  top: 30px;
+}
+
+main #grid-container #taskPanel #taskPanelBody {
+  padding: 1rem;
+}
+
+main #grid-container #pomodorTimer {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  text-align: center;
+}
+
+main #grid-container #pomodorTimer button {
+  padding: .5rem 1rem;
+  font-size: 1.3rem;
+  color: #262626;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+main #grid-container #pomodorTimer button:hover {
+  color: #fff;
+  background-color: #262626;
+}
+
+main #grid-container #pomodorTimer #pomoButtons {
+  width: 100%;
+  text-align: center;
+}
+
+main #grid-container #pomodorTimer #pomoTimer {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+main #grid-container #pomodorTimer #pomoStart {
+  width: 50%;
+}
+
+main #grid-container #motivationalQuotes {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  grid-row: 2/-1;
+}
+
+main #grid-container #motivationalQuotes #quoteHeader {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+main #grid-container #motivationalQuotes #quote {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+/*# sourceMappingURL=index.css.map */
