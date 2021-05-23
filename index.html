@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
+    <div id="overlay"></div>
     <div class="container">
         <header>
             <h1>Pomodoro 🍅</h1>
@@ -22,6 +23,22 @@
                 <i class="fas fa-cog" id="settingsButton"></i>
             </nav>
         </header>
+        <div id="helpMenu">
+            <div id="helpHeader">
+                <h3>What is this ?</h3>
+                <span>&times;</span>
+            </div>
+            <div id="helpBody">
+                <h2>Pomodo Technique 🍅⏰</h2>
+                <p>The Pomodoro Technique is created by Francesco Cirillo for a more productive way to work and study</p>
+                <ul>
+                    <li>🤔 Decide on the task to be done</li>
+                    <li>⏱ Set the timer to 25 minutes</li>
+                    <li>⚙ Work on the task until the timer rings</li>
+                    <li>☕ Take a short 5 min break</li>
+                </ul>
+            </div>
+        </div>
         <main>
             <div id="grid-container">
                 <div id="taskPanel" class="pomoCard">
@@ -57,5 +74,6 @@
         </main>
         <!-- end of container -->
     </div>
+    <script src="js/index.js"></script>
 </body>
 </html>
