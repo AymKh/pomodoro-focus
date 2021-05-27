@@ -2,7 +2,7 @@ const overlay = document.querySelector("#overlay")
 const helpButton = document.querySelector("#helpButton")
 const helpMenu = document.querySelector("#helpMenu")
 const helpExitButton = document.querySelector('#helpMenu span')
-let helpMenuIsShown = false
+let helpMenuIsShown = true
 
 helpButton.addEventListener('click', ()=>{
     helpMenu.style.display = "block"
